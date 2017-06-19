@@ -22,5 +22,11 @@ public class bullet : MonoBehaviour {
 		if (name == "wall") {
 			Destroy (gameObject); 
 		}
+
+		if (name == "enemy") {
+			col.gameObject.GetComponent<Animator> ().SetBool ("dead", true);
+			soundManager.instance.PlayOneShot (soundManager.instance.explosionEnemy);
+			Destroy (gameObject);
+		}
 	}
 }

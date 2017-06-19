@@ -7,7 +7,10 @@ public class soundManager : MonoBehaviour {
 	public static soundManager instance = null;
 	private AudioSource soundEffects = null;
 
-	public AudioClip fire = null;
+	public AudioClip fire;
+	public AudioClip fireEnemy;
+	public AudioClip enemyAttack;
+	public AudioClip explosionEnemy;
 
 	// Use this for initialization
 	void Start () {
